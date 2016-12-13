@@ -3,9 +3,9 @@ package javaPortfolio;
 import java.util.Scanner;
 
 /**
- * In this challenge, we test your knowledge of using if-else conditional
- * statements to automate decision-making processes. An if-else statement has
- * the following logical flow:
+ * Objective In this challenge, we're getting started with conditional
+ * statements. Check out the Tutorial tab for learning materials and an
+ * instructional video!
  * 
  * Task Given an integer, , perform the following conditional actions:
  * 
@@ -41,30 +41,25 @@ import java.util.Scanner;
  * @author mosesmanning
  *
  */
-public class JavaIfElse {
+public class introToConditionalStatements {
 	public static void main(String[] args) {
-
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+		scan.close();
 		String ans = "";
-		if (n >= 2 && n <= 5) {
-			ans = "Not Weird";
 
-		}
-		if (n >= 6 && n <= 20) {
-			ans = "Weird";
-
-		}
-
-		if (n > 20) {
-			ans = "Not Weird";
-			// Complete the code
-
-		}
+		// if 'n' is NOT evenly divisible by 2 (i.e.: n is odd)
 		if (n % 2 == 1) {
 			ans = "Weird";
+		} else if((n%2 == 0) && (n>=2 && n<=5)){
+			// Complete the code
+			ans = "Not Weird";
+		}else if((n%2 == 0) && (n>=6 && n<=20)){
+			// Complete the code
+			ans = "Weird";
+		}else if(n>20){
+			ans = "Not Weird";
 		}
 		System.out.println(ans);
-
 	}
 }

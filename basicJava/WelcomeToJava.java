@@ -1,4 +1,4 @@
-package javaPortfolio;
+package javaPortfolio.basicJava;
 
 /**
  * Welcome to the world of Java! In this challenge, we practice printing to
