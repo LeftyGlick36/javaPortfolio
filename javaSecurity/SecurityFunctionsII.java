@@ -1,4 +1,4 @@
-package javaPortfolio.javaSecurity;
+package javaPortfolio.JavaSecurity;
 
 /**
  * We now understand the definition of functions.

@@ -1,4 +1,4 @@
-package javaPortfolio.basicJava;
+package javaPortfolio.BasicJava;
 
 import java.time.format.ResolverStyle;
 import java.util.Scanner;

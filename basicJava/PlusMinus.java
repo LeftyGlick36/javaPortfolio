@@ -1,4 +1,4 @@
-package javaPortfolio.basicJava;
+package javaPortfolio.BasicJava;
 
 import java.util.Scanner;
 import java.io.*;
