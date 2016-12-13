@@ -1,4 +1,4 @@
-package javaPortfolio;
+package javaPortfolio.Algorithms;
 
 import java.util.Scanner;
 

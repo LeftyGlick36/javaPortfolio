@@ -1,4 +1,4 @@
-package javaPortfolio;
+package javaPortfolio.javaSecurity;
 
 /**
  * Before we jump into security concepts, let us familiarize ourselves with the

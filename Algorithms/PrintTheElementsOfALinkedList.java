@@ -1,4 +1,4 @@
-package javaPortfolio;
+package javaPortfolio.Algorithms;
 
 /**
  * If you're new to linked lists, this is a great exercise for learning about
