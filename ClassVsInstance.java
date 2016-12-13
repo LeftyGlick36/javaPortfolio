@@ -43,7 +43,7 @@ import java.util.Scanner;
  * @author mosesmanning
  *
  */
-public class Person {
+public class ClassVsInstance {
 
 	private int age;
 
@@ -52,7 +52,7 @@ public class Person {
 		int T = sc.nextInt();
 		for (int i = 0; i < T; i++) {
 			int age = sc.nextInt();
-			Person p = new Person(age);
+			ClassVsInstance p = new ClassVsInstance(age);
 			p.amIOld();
 			for (int j = 0; j < 3; j++) {
 				p.yearPasses();
@@ -63,7 +63,7 @@ public class Person {
 		sc.close();
 	}
 
-	public Person(int initialAge) {
+	public ClassVsInstance(int initialAge) {
 		// Add some more code to run some checks on initialAge
 		age = initialAge;
 	}
@@ -77,7 +77,7 @@ public class Person {
 		
 		if (!(age > 0)) {
 			age = 0;
-			String zero = "Age is not valid, setting age to " + Person.this.age + ".";
+			String zero = "Age is not valid, setting age to " + ClassVsInstance.this.age + ".";
 
 			System.out.println(zero.trim());
 		}
