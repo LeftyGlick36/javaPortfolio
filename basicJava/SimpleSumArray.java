@@ -40,4 +40,6 @@ public class SimpleSumArray {
 
 		System.out.println(x);
 	}
+	
+	
 }

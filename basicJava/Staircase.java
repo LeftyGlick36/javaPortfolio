@@ -9,10 +9,7 @@ import java.util.regex.*;
 /**
  * Consider a staircase of size :
  * 
- *    # 
- *   ## 
- *  ### 
- * ####
+ * # ## ### ####
  * 
  * Observe that its base and height are both equal to , and the image is drawn
  * using # symbols and spaces. The last line is not preceded by any spaces.
@@ -33,12 +30,7 @@ import java.util.regex.*;
  * 
  * 6 Sample Output
  * 
- *      # 
- *     ## 
- *    ### 
- *   #### 
- *  ##### 
- * ###### 
+ * # ## ### #### ##### ######
  * 
  * Explanation
  * 
@@ -51,7 +43,15 @@ import java.util.regex.*;
 public class Staircase {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		int n = in.nextInt();
+		int _n;
+		_n = Integer.parseInt(in.nextLine().trim());
+
+		StairCase(_n);
+
+	}
+
+	static void StairCase(int n) {
+		
 		int counter = 1;
 
 		for (int i = 0; i < n; i++) {
@@ -60,7 +60,7 @@ public class Staircase {
 				if (var > counter) {
 					System.out.print(" ");
 				}
-				
+
 				if (var <= counter) {
 					System.out.print("#");
 				}
