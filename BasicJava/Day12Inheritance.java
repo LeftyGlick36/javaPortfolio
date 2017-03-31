@@ -53,76 +53,78 @@ import java.util.*;
  */
 
 public class Day12Inheritance {
-	protected String firstName;
-	protected String lastName;
-	protected int idNumber;
+	class Person {
+		protected String firstName;
+		protected String lastName;
+		protected int idNumber;
 
-	// Constructor
-	Day12Inheritance(String firstName, String lastName, int identification) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.idNumber = identification;
-	}
-
-	// Print person data
-	public void printPerson() {
-		System.out.println("Name: " + lastName + ", " + firstName + "\nID: " + idNumber);
-	}
-
-}
-
-class Student extends Day12Inheritance {
-	private int[] testScores;
-	int finalScore = 0;
-	int answer;
-
-	Student(String firstName, String lastName, int identification, int[] testScores) {
-		super(firstName, lastName, identification);
-		this.testScores = testScores;
-	}
-
-	public String calculate() {
-		for (int i = 0; i < testScores.length; i++) {
-			finalScore += testScores[i];
+		// Constructor
+		Person(String firstName, String lastName, int identification) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.idNumber = identification;
 		}
-		answer = (finalScore / testScores.length);
-		if ((answer >= 90) && (answer <= 100)) {
-			return "O";
-		} else if ((answer >= 80) && (answer < 90)) {
-			return "E";
 
-		} else if ((answer >= 70) && (answer < 80)) {
-			return "A";
-
-		} else if ((answer >= 55) && (answer < 70)) {
-			return "P";
-
-		} else if ((answer >= 40) && (answer < 55)) {
-			return "D";
-
-		} else {
-			return "T";
-
+		// Print person data
+		public void printPerson() {
+			System.out.println("Name: " + lastName + ", " + firstName + "\nID: " + idNumber);
 		}
+
 	}
 
-}
+	class Student extends Person {
+		private int[] testScores;
+		int finalScore = 0;
+		int answer;
 
-class Solution {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		String firstName = scan.next();
-		String lastName = scan.next();
-		int id = scan.nextInt();
-		int numScores = scan.nextInt();
-		int[] testScores = new int[numScores];
-		for (int i = 0; i < numScores; i++) {
-			testScores[i] = scan.nextInt();
+		Student(String firstName, String lastName, int identification, int[] testScores) {
+			super(firstName, lastName, identification);
+			this.testScores = testScores;
 		}
-		scan.close();
 
-		Student s = new Student(firstName, lastName, id, testScores);
-		s.printPerson();
-		System.out.println("Grade: " + s.calculate());
+		public String calculate() {
+			for (int i = 0; i < testScores.length; i++) {
+				finalScore += testScores[i];
+			}
+			answer = (finalScore / testScores.length);
+			if ((answer >= 90) && (answer <= 100)) {
+				return "O";
+			} else if ((answer >= 80) && (answer < 90)) {
+				return "E";
+
+			} else if ((answer >= 70) && (answer < 80)) {
+				return "A";
+
+			} else if ((answer >= 55) && (answer < 70)) {
+				return "P";
+
+			} else if ((answer >= 40) && (answer < 55)) {
+				return "D";
+
+			} else {
+				return "T";
+
+			}
+		}
+
+	}
+
+	class Solution {
+		public void main(String[] args) {
+			Scanner scan = new Scanner(System.in);
+			String firstName = scan.next();
+			String lastName = scan.next();
+			int id = scan.nextInt();
+			int numScores = scan.nextInt();
+			int[] testScores = new int[numScores];
+			for (int i = 0; i < numScores; i++) {
+				testScores[i] = scan.nextInt();
+			}
+			scan.close();
+
+			Student s = new Student(firstName, lastName, id, testScores);
+			s.printPerson();
+			System.out.println("Grade: " + s.calculate());
+		}
 	}
 }
